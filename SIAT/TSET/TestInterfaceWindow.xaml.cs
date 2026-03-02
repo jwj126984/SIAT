@@ -775,9 +775,6 @@ namespace SIAT
             
             // 清空变量值存储字典，确保每次测试都是全新的状态
             _variableValues.Clear();
-            
-            // 清空步骤间变量传递字典，确保每次测试都是全新的状态
-            _stepVariables.Clear();
 
             // 重置测试进度
             InitializeProgressBar();
@@ -1006,9 +1003,6 @@ namespace SIAT
             }
         }
 
-        // 用于存储步骤间传递的变量
-        private Dictionary<string, object> _stepVariables = new Dictionary<string, object>();
-
         private async Task<TestStepResult> ExecuteTestStep(TestStepConfig step, int currentStep, int totalSteps)
         {
             try
@@ -1060,27 +1054,17 @@ namespace SIAT
                     Dispatcher.InvokeAsync(() =>
                     {
                         UpdateVariableDisplay(args.Variable);
-                        // 将更新的变量存储到_stepVariables中
-                        _stepVariables[args.Variable.Name] = args.Variable.Value;
                     });
                 };
 
                 // 准备项目变量的Value属性值
-                var variables = new Dictionary<string, object>(_stepVariables);
+                var variables = new Dictionary<string, object>();
                 // 添加条码信息到变量字典，以便插件步骤使用
                 variables["Barcode"] = _currentBarcode;
                
+                
                 // 执行测试步骤，传递项目变量的Value属性值
                 var result = await executionEngine.ExecuteStepAsync(step, variables);
-                
-                // 将步骤的输出值合并到_stepVariables中
-                if (result.OutputValues != null)
-                {
-                    foreach (var kvp in result.OutputValues)
-                    {
-                        _stepVariables[kvp.Key] = kvp.Value;
-                    }
-                }
                 
                 return result;
 
@@ -1934,10 +1918,16 @@ namespace SIAT
                 foreach (var projectConfig in _loadedProjects.OrderBy(p => p.Name))
                 {
                     // 检查项目中是否包含该变量
-                    if (projectConfig.Variables.Any(v => 
+                    var existingVariable = projectConfig.Variables.FirstOrDefault(v => 
                         string.Equals(v.Name, variable.Name, StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase)))
+                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase));
+                    
+                    if (existingVariable != null)
                     {
+                        // 直接更新变量的Value属性，这样在下一个步骤输入绑定时就能使用更新后的值
+                        existingVariable.Value = variable.ActualValue;
+                        existingVariable.ActualValue = variable.ActualValue;
+                        
                         // 使用项目名+变量名作为键，确保每个项目的变量值独立存储
                         string key = $"{projectConfig.Name}_{variable.Name}";
                         _variableValues[key] = variable;
