@@ -1918,10 +1918,16 @@ namespace SIAT
                 foreach (var projectConfig in _loadedProjects.OrderBy(p => p.Name))
                 {
                     // 检查项目中是否包含该变量
-                    if (projectConfig.Variables.Any(v => 
+                    var existingVariable = projectConfig.Variables.FirstOrDefault(v => 
                         string.Equals(v.Name, variable.Name, StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase)))
+                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase));
+                    
+                    if (existingVariable != null)
                     {
+                        // 直接更新项目配置中变量的Value属性
+                        existingVariable.Value = variable.Value;
+                        existingVariable.ActualValue = variable.ActualValue;
+                        
                         // 使用项目名+变量名作为键，确保每个项目的变量值独立存储
                         string key = $"{projectConfig.Name}_{variable.Name}";
                         _variableValues[key] = variable;
@@ -1942,6 +1948,7 @@ namespace SIAT
         private void UpdateVariableProperties(TestVariable existingVariable, TestVariable variable)
         {
             existingVariable.ActualValue = variable.ActualValue;
+            existingVariable.Value = variable.Value;
             existingVariable.TestTime = variable.TestTime;
             existingVariable.Duration = variable.Duration;
             existingVariable.Type = variable.Type;

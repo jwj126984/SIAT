@@ -272,14 +272,11 @@ namespace SIAT.TSET
                                 variableValue = outputValue;
                             }
                             
-                            // 直接更新变量的Value属性，确保在下一个步骤中使用时能够获取到最新值
-                            outputBinding.SelectedVariable.Value = variableValue?.ToString() ?? string.Empty;
-                            
                             var testVariable = new TestVariable
                             {
                                 Name = outputBinding.SelectedVariable.VariableName,
-                                ActualValue = outputBinding.SelectedVariable.Value,
-                                Value = outputBinding.SelectedVariable.Value
+                                ActualValue = variableValue?.ToString() ?? string.Empty,
+                                Value = variableValue?.ToString() ?? string.Empty
                             };
                             VariableUpdated?.Invoke(this, new TestVariableUpdatedEventArgs(step.Name, testVariable));
                         }
@@ -328,15 +325,12 @@ namespace SIAT.TSET
                         value = actualValue;
                     }
 
-                    // 直接更新变量的Value属性，确保在下一个步骤中使用时能够获取到最新值
-                    outputBinding.SelectedVariable.Value = value;
-
                     // 触发变量更新事件
                     var testVariable = new TestVariable
                     {
                         Name = outputBinding.SelectedVariable.VariableName, // 使用输出绑定的Name作为键值
-                        ActualValue = outputBinding.SelectedVariable.Value,
-                        Value = outputBinding.SelectedVariable.Value
+                        ActualValue = value,
+                        Value = value
                     };
                     VariableUpdated?.Invoke(this, new TestVariableUpdatedEventArgs(step.Name, testVariable));
                 }
