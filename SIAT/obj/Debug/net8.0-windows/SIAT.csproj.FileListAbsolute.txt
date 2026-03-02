@@ -89,3 +89,4 @@ D:\VSDemo\SIAT\SIAT\obj\Debug\net8.0-windows\Project\SaveAsProjectWindow.g.cs
 D:\VSDemo\SIAT\SIAT\obj\Debug\net8.0-windows\Project\SaveAsProjectWindow.baml
 D:\VSDemo\SIAT\SIAT\obj\Debug\net8.0-windows\TestCase\SaveAsTestCaseWindow.g.cs
 D:\VSDemo\SIAT\SIAT\obj\Debug\net8.0-windows\TestCase\SaveAsTestCaseWindow.baml
+D:\VSDemo\SIAT\SIAT\obj\Debug\net8.0-windows\SIAT.sourcelink.json
