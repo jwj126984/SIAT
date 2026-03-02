@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTestCaseStepItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseStepItem>
+    <Index>1</Index>
+    <Step>
+      <Name>启动电源</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings />
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>2</Index>
+    <Step>
+      <Name>设置电压10V，1A</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings />
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>3</Index>
+    <Step>
+      <Name>读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>插件步骤</DeviceName>
+    <InputBindings>
+      <InputBindingItem>
+        <Name>DeviceName</Name>
+        <InputDescription>设备名称</InputDescription>
+        <InputVariable>
+          <VariableName>设备名称</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>产品BRMS</Value>
+        </InputVariable>
+      </InputBindingItem>
+    </InputBindings>
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>Volt</Name>
+        <OutputDescription>读取电压</OutputDescription>
+        <OutputVariable>
+          <VariableName>产品电压10V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>4</Index>
+    <Step>
+      <Name>电源读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>电源读取电压</Name>
+        <OutputDescription>电源读取电压</OutputDescription>
+        <OutputVariable>
+          <VariableName>电源电压10V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>5</Index>
+    <Step>
+      <Name>设置电压12V，1A</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings />
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>6</Index>
+    <Step>
+      <Name>读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>插件步骤</DeviceName>
+    <InputBindings>
+      <InputBindingItem>
+        <Name>DeviceName</Name>
+        <InputDescription>DeviceName</InputDescription>
+        <InputVariable>
+          <VariableName>设备名称</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>产品BRMS</Value>
+        </InputVariable>
+      </InputBindingItem>
+    </InputBindings>
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>Volt</Name>
+        <OutputDescription>Volt</OutputDescription>
+        <OutputVariable>
+          <VariableName>产品电压12V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>7</Index>
+    <Step>
+      <Name>电源读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>电源读取电压</Name>
+        <OutputDescription>电源读取电压</OutputDescription>
+        <OutputVariable>
+          <VariableName>电源电压12V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>8</Index>
+    <Step>
+      <Name>设置电压14V，1A</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings />
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>9</Index>
+    <Step>
+      <Name>读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>插件步骤</DeviceName>
+    <InputBindings>
+      <InputBindingItem>
+        <Name>DeviceName</Name>
+        <InputDescription>DeviceName</InputDescription>
+        <InputVariable>
+          <VariableName>设备名称</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>产品BRMS</Value>
+        </InputVariable>
+      </InputBindingItem>
+    </InputBindings>
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>Volt</Name>
+        <OutputDescription>Volt</OutputDescription>
+        <OutputVariable>
+          <VariableName>产品电压14V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>10</Index>
+    <Step>
+      <Name>电源读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>电源PLD</DeviceName>
+    <InputBindings />
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>电源读取电压</Name>
+        <OutputDescription>电源读取电压</OutputDescription>
+        <OutputVariable>
+          <VariableName>电源电压14V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+  <TestCaseStepItem>
+    <Index>11</Index>
+    <Step>
+      <Name>电流标定</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>插件步骤</DeviceName>
+    <InputBindings>
+      <InputBindingItem>
+        <Name>DeviceName</Name>
+        <InputDescription>设备名称</InputDescription>
+        <InputVariable>
+          <VariableName>设备名称</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>产品BRMS</Value>
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>V10</Name>
+        <InputDescription>电源电压10V</InputDescription>
+        <InputVariable>
+          <VariableName>电源电压10V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>v10</Name>
+        <InputDescription>产品电压10V</InputDescription>
+        <InputVariable>
+          <VariableName>产品电压10V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>V12</Name>
+        <InputDescription>电源电压12V</InputDescription>
+        <InputVariable>
+          <VariableName>电源电压12V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>v12</Name>
+        <InputDescription>产品电压12V</InputDescription>
+        <InputVariable>
+          <VariableName>产品电压12V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>V14</Name>
+        <InputDescription>电源电压14V</InputDescription>
+        <InputVariable>
+          <VariableName>电源电压14V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+      <InputBindingItem>
+        <Name>v14</Name>
+        <InputDescription>产品电压14V</InputDescription>
+        <InputVariable>
+          <VariableName>产品电压14V</VariableName>
+          <VariableType>Double</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </InputVariable>
+      </InputBindingItem>
+    </InputBindings>
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>READK</Name>
+        <OutputDescription>读取K</OutputDescription>
+        <OutputVariable>
+          <VariableName>K值</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>true</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+      <OutputBindingItem>
+        <Name>READB</Name>
+        <OutputDescription>读取B</OutputDescription>
+        <OutputVariable>
+          <VariableName>B值</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>true</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+</ArrayOfTestCaseStepItem>

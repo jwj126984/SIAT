@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>USBCANFD-200U</Name>
+  <DeviceType>ZLG_USBCANFD_200U</DeviceType>
+  <DeviceIndex>0</DeviceIndex>
+  <CommunicationType>CAN</CommunicationType>
+  <Params>
+    <SerialPort>COM1</SerialPort>
+    <BaudRate>115200</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <IPAddress>192.168.1.1</IPAddress>
+    <Port>8080</Port>
+    <CanChannel>CAN0</CanChannel>
+    <DeviceIndex>0</DeviceIndex>
+    <CanBaudRate>500000</CanBaudRate>
+    <CanWorkMode>Normal</CanWorkMode>
+    <IsCanFd>true</IsCanFd>
+    <CanFdDataBaudRate>2000000</CanFdDataBaudRate>
+    <ArbitrationSamplePoint>80</ArbitrationSamplePoint>
+    <DataSamplePoint>80</DataSamplePoint>
+    <CanFilterMode>DualFilter</CanFilterMode>
+    <AcceptanceCode>0</AcceptanceCode>
+    <AcceptanceMask>4294967295</AcceptanceMask>
+    <IsTerminalResistorEnabled>true</IsTerminalResistorEnabled>
+    <EnableErrorFrame>false</EnableErrorFrame>
+    <FilterCanId>0</FilterCanId>
+    <UsbDeviceId>VID_0000&amp;PID_0002</UsbDeviceId>
+  </Params>
+  <IsEnabled>false</IsEnabled>
+  <Status>未连接</Status>
+  <Steps>
+    <Step>
+      <Name>扩展会话</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>CAN</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>7DF</Id>
+        <Content>02 10 01 </Content>
+      </Protocol>
+      <ResultVariables>
+        <ResultVariable>
+          <Name>回读</Name>
+          <Unit />
+          <StartBit>0</StartBit>
+          <EndBit>7</EndBit>
+          <Length>8</Length>
+          <Resolution>1</Resolution>
+          <Offset>0</Offset>
+          <Endian>BigEndian</Endian>
+          <CanId>7dc</CanId>
+        </ResultVariable>
+      </ResultVariables>
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+  </Steps>
+</Device>

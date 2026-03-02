@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>烧录器</Name>
+  <DeviceType>ZLG_USBCAN_I</DeviceType>
+  <DeviceIndex>0</DeviceIndex>
+  <CommunicationType>Serial</CommunicationType>
+  <Params>
+    <SerialPort>COM19</SerialPort>
+    <BaudRate>115200</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <IPAddress>192.168.1.1</IPAddress>
+    <Port>8080</Port>
+    <CanChannel>CAN0</CanChannel>
+    <DeviceIndex>0</DeviceIndex>
+    <CanBaudRate>250000</CanBaudRate>
+    <CanWorkMode>Normal</CanWorkMode>
+    <IsCanFd>false</IsCanFd>
+    <CanFdDataBaudRate>2000000</CanFdDataBaudRate>
+    <ArbitrationSamplePoint>80</ArbitrationSamplePoint>
+    <DataSamplePoint>80</DataSamplePoint>
+    <CanFilterMode>DualFilter</CanFilterMode>
+    <AcceptanceCode>0</AcceptanceCode>
+    <AcceptanceMask>4294967295</AcceptanceMask>
+    <IsTerminalResistorEnabled>false</IsTerminalResistorEnabled>
+    <EnableErrorFrame>false</EnableErrorFrame>
+    <FilterCanId>0</FilterCanId>
+    <UsbDeviceId>VID_13D3&amp;PID_5497</UsbDeviceId>
+  </Params>
+  <IsEnabled>false</IsEnabled>
+  <Status>未连接</Status>
+  <Steps />
+</Device>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestCaseConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>测试</Name>
+  <Description />
+  <CreatedDate>2026-02-27T14:42:44.0004589+08:00</CreatedDate>
+  <ModifiedDate>2026-02-28T11:44:03.9870635+08:00</ModifiedDate>
+  <Projects>
+    <Project>
+      <Name>测试实时</Name>
+      <Description />
+      <ProjectPath>D:\VSDemo\SIAT\SIAT\bin\Debug\net8.0-windows\Projects\测试实时</ProjectPath>
+      <AddedDate>2026-02-28T11:44:02.1322645+08:00</AddedDate>
+      <Order>1</Order>
+      <Variables />
+    </Project>
+    <Project>
+      <Name>设备编码</Name>
+      <Description />
+      <ProjectPath>D:\VSDemo\SIAT\SIAT\bin\Debug\net8.0-windows\Projects\设备编码</ProjectPath>
+      <AddedDate>2026-02-28T11:44:03.2865684+08:00</AddedDate>
+      <Order>2</Order>
+      <Variables />
+    </Project>
+  </Projects>
+</TestCaseConfig>

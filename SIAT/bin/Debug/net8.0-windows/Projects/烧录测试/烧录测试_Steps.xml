@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTestCaseStepItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseStepItem>
+    <Index>1</Index>
+    <Step>
+      <Name>程序烧录</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>HEX</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x123</Id>
+        <Content />
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <DeviceName>插件步骤</DeviceName>
+    <InputBindings>
+      <InputBindingItem>
+        <Name>DeviceName</Name>
+        <InputDescription>设备名称</InputDescription>
+        <InputVariable>
+          <VariableName>烧录设备</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>true</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>烧录器</Value>
+        </InputVariable>
+      </InputBindingItem>
+    </InputBindings>
+    <OutputBindings>
+      <OutputBindingItem>
+        <Name>Result</Name>
+        <OutputDescription>烧录结果</OutputDescription>
+        <OutputVariable>
+          <VariableName>烧录结果</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>true</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </OutputVariable>
+      </OutputBindingItem>
+    </OutputBindings>
+  </TestCaseStepItem>
+</ArrayOfTestCaseStepItem>

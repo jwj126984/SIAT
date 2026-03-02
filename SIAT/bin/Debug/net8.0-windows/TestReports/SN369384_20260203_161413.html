@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试执行报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+        .summary { background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .step-result { margin: 10px 0; padding: 10px; border-left: 4px solid #4CAF50; background: #f9f9f9; }
+        .step-failed { border-left-color: #f44336; background: #ffeaea; }
+        .conclusion { padding: 15px; border-radius: 5px; margin-top: 20px; }
+        .passed { background: #e8f5e8; border: 1px solid #4CAF50; }
+        .failed { background: #ffeaea; border: 1px solid #f44336; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>测试执行报告</h1>
+    </div>
+    <div class="summary">
+        <h2>测试基本信息</h2>
+        <p><strong>测试用例:</strong> 无设备</p>
+        <p><strong>产品条码:</strong> SN369384</p>
+        <p><strong>执行时间:</strong> 2026-02-03 16:14:13</p>
+        <p><strong>总耗时:</strong> 151.510 秒</p>
+        <p><strong>测试结果:</strong> <span style="color: #4CAF50">通过</span></p>
+    </div>
+    <div class="summary">
+        <h2>测试统计</h2>
+        <p><strong>总步骤数:</strong> 1</p>
+        <p><strong>通过步骤:</strong> <span style="color: #4CAF50">1</span></p>
+        <p><strong>失败步骤:</strong> <span style="color: #f44336">0</span></p>
+        <p><strong>通过率:</strong> 100.00%</p>
+    </div>
+    <h2>详细步骤执行结果</h2>
+    <div class="step-result">
+        <h3>步骤 1: 示例步骤1</h3>
+        <p><strong>状态:</strong> <span style="color: #4CAF50">✓ 通过</span></p>
+        <p><strong>耗时:</strong> 151.371 秒</p>
+        <p><strong>实际值:</strong> 示例步骤1执行成功</p>
+    </div>
+    <div class="conclusion passed">
+        <h2>测试结论</h2>
+        <p>✓ 测试通过 - 所有测试步骤均执行成功</p>
+    </div>
+    <p style="text-align: center; margin-top: 30px; color: #666;">报告生成时间: 2026-02-03 16:14:13</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProjectVariable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectVariable>
+    <VariableName>设备名称</VariableName>
+    <VariableType>String</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value>产品BRMS</Value>
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>编码结果</VariableName>
+    <VariableType>String</VariableType>
+    <Description />
+    <IsVisible>true</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+</ArrayOfProjectVariable>

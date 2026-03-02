@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProjectVariable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectVariable>
+    <VariableName>设备名称</VariableName>
+    <VariableType>String</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value>产品BRMS</Value>
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>产品电压10V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>电源电压10V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>产品电压12V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>产品电压14V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>电源电压12V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>电源电压14V</VariableName>
+    <VariableType>Double</VariableType>
+    <Description />
+    <IsVisible>false</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>K值</VariableName>
+    <VariableType>String</VariableType>
+    <Description />
+    <IsVisible>true</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+  <ProjectVariable>
+    <VariableName>B值</VariableName>
+    <VariableType>String</VariableType>
+    <Description />
+    <IsVisible>true</IsVisible>
+    <QualifiedValue />
+    <Unit />
+    <IsRange>false</IsRange>
+    <Value />
+  </ProjectVariable>
+</ArrayOfProjectVariable>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试执行报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+        .summary { background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .step-result { margin: 10px 0; padding: 10px; border-left: 4px solid #4CAF50; background: #f9f9f9; }
+        .step-failed { border-left-color: #f44336; background: #ffeaea; }
+        .conclusion { padding: 15px; border-radius: 5px; margin-top: 20px; }
+        .passed { background: #e8f5e8; border: 1px solid #4CAF50; }
+        .failed { background: #ffeaea; border: 1px solid #f44336; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>测试执行报告</h1>
+    </div>
+    <div class="summary">
+        <h2>测试基本信息</h2>
+        <p><strong>测试用例:</strong> 新用例20251223095611</p>
+        <p><strong>产品条码:</strong> SN805544</p>
+        <p><strong>执行时间:</strong> 2026-01-22 15:28:26</p>
+        <p><strong>总耗时:</strong> 0.332 秒</p>
+        <p><strong>测试结果:</strong> <span style="color: #f44336">失败</span></p>
+    </div>
+    <div class="summary">
+        <h2>测试统计</h2>
+        <p><strong>总步骤数:</strong> 5</p>
+        <p><strong>通过步骤:</strong> <span style="color: #4CAF50">2</span></p>
+        <p><strong>失败步骤:</strong> <span style="color: #f44336">3</span></p>
+        <p><strong>通过率:</strong> 40.00%</p>
+    </div>
+    <h2>详细步骤执行结果</h2>
+    <div class="step-result step-failed">
+        <h3>步骤 1: 获取电压</h3>
+        <p><strong>状态:</strong> <span style="color: #f44336">✗ 失败</span></p>
+        <p><strong>耗时:</strong> 0.070 秒</p>
+        <p><strong>实际值:</strong> 配置错误</p>
+        <p><strong>错误信息:</strong> 未注册的协议处理器: ID=,DATA=GET V</p>
+    </div>
+    <div class="step-result step-failed">
+        <h3>步骤 2: 获取电压</h3>
+        <p><strong>状态:</strong> <span style="color: #f44336">✗ 失败</span></p>
+        <p><strong>耗时:</strong> 0.045 秒</p>
+        <p><strong>实际值:</strong> 配置错误</p>
+        <p><strong>错误信息:</strong> 未注册的协议处理器: ID=,DATA=GET V</p>
+    </div>
+    <div class="step-result">
+        <h3>步骤 3: 请求扩展会话</h3>
+        <p><strong>状态:</strong> <span style="color: #4CAF50">✓ 通过</span></p>
+        <p><strong>耗时:</strong> 0.031 秒</p>
+        <p><strong>实际值:</strong> 已发送，不等待回传</p>
+    </div>
+    <div class="step-result step-failed">
+        <h3>步骤 4: 获取版本号</h3>
+        <p><strong>状态:</strong> <span style="color: #f44336">✗ 失败</span></p>
+        <p><strong>耗时:</strong> 0.020 秒</p>
+        <p><strong>实际值:</strong> [CANalyst-Ⅱ] 接收成功: ID=0x200, Data=81 30 00 06 02, DLC=5, Timestamp=39577466us</p>
+    </div>
+    <div class="step-result">
+        <h3>步骤 5: 请求扩展会话</h3>
+        <p><strong>状态:</strong> <span style="color: #4CAF50">✓ 通过</span></p>
+        <p><strong>耗时:</strong> 0.001 秒</p>
+        <p><strong>实际值:</strong> 已发送，不等待回传</p>
+    </div>
+    <div class="conclusion failed">
+        <h2>测试结论</h2>
+        <p>✗ 测试失败 - 存在失败的测试步骤</p>
+        <p><strong>失败步骤数量:</strong> 3</p>
+    </div>
+    <p style="text-align: center; margin-top: 30px; color: #666;">报告生成时间: 2026-01-22 15:28:26</p>
+</body>
+</html>

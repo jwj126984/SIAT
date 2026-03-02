@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VSDemo\\SIAT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\communicationmanagement\\cxkjcancommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\communicationmanagement\\cxkjcancommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\tset\\pluginstepexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\tset\\pluginstepexecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\tset\\testexecutionengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\tset\\testexecutionengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\tset\\testinterfacewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\tset\\testinterfacewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\tset\\testinterfacewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\tset\\testinterfacewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|d:\\vsdemo\\siat\\siat\\communicationmanagement\\cancommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFF952F-5C92-4943-9276-7BAD1DFFC520}|SIAT\\SIAT.csproj|solutionrelative:siat\\communicationmanagement\\cancommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TestInterfaceWindow.xaml",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestInterfaceWindow.xaml",
+              "RelativeDocumentMoniker": "SIAT\\TSET\\TestInterfaceWindow.xaml",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestInterfaceWindow.xaml",
+              "RelativeToolTip": "SIAT\\TSET\\TestInterfaceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-27T08:23:06.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestInterfaceWindow.xaml.cs",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestInterfaceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SIAT\\TSET\\TestInterfaceWindow.xaml.cs",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestInterfaceWindow.xaml.cs",
+              "RelativeToolTip": "SIAT\\TSET\\TestInterfaceWindow.xaml.cs",
+              "ViewState": "AgIAABsKAAAAAAAAAAAvwCgKAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T07:57:38.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestExecutionEngine.cs",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestExecutionEngine.cs",
+              "RelativeDocumentMoniker": "SIAT\\TSET\\TestExecutionEngine.cs",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\TestExecutionEngine.cs",
+              "RelativeToolTip": "SIAT\\TSET\\TestExecutionEngine.cs",
+              "ViewState": "AgIAAN8FAAAAAAAAAAA5wE4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T07:56:57.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PluginStepExecutor.cs",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\PluginStepExecutor.cs",
+              "RelativeDocumentMoniker": "SIAT\\TSET\\PluginStepExecutor.cs",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\TSET\\PluginStepExecutor.cs",
+              "RelativeToolTip": "SIAT\\TSET\\PluginStepExecutor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0BAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T07:54:06.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CXKJCanCommunication.cs",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\CommunicationManagement\\CXKJCanCommunication.cs",
+              "RelativeDocumentMoniker": "SIAT\\CommunicationManagement\\CXKJCanCommunication.cs",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\CommunicationManagement\\CXKJCanCommunication.cs",
+              "RelativeToolTip": "SIAT\\CommunicationManagement\\CXKJCanCommunication.cs",
+              "ViewState": "AgIAAKkBAAAAAAAAAADgv7kBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T03:01:09.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CANCommunication.cs",
+              "DocumentMoniker": "D:\\VSDemo\\SIAT\\SIAT\\CommunicationManagement\\CANCommunication.cs",
+              "RelativeDocumentMoniker": "SIAT\\CommunicationManagement\\CANCommunication.cs",
+              "ToolTip": "D:\\VSDemo\\SIAT\\SIAT\\CommunicationManagement\\CANCommunication.cs",
+              "RelativeToolTip": "SIAT\\CommunicationManagement\\CANCommunication.cs",
+              "ViewState": "AgIAAPMBAAAAAAAAAADgvwoCAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T02:36:10.04Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

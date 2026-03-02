@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CANalyst</Name>
+  <DeviceType>CXKJ_CANALYST_II</DeviceType>
+  <DeviceIndex>0</DeviceIndex>
+  <CommunicationType>CAN</CommunicationType>
+  <Params>
+    <SerialPort>COM1</SerialPort>
+    <BaudRate>115200</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <IPAddress>192.168.1.1</IPAddress>
+    <Port>8080</Port>
+    <CanChannel>CAN0</CanChannel>
+    <DeviceIndex>0</DeviceIndex>
+    <CanBaudRate>500000</CanBaudRate>
+    <CanWorkMode>Normal</CanWorkMode>
+    <IsCanFd>false</IsCanFd>
+    <CanFdDataBaudRate>2000000</CanFdDataBaudRate>
+    <ArbitrationSamplePoint>80</ArbitrationSamplePoint>
+    <DataSamplePoint>80</DataSamplePoint>
+    <CanFilterMode>DualFilter</CanFilterMode>
+    <AcceptanceCode>0</AcceptanceCode>
+    <AcceptanceMask>4294967295</AcceptanceMask>
+    <IsTerminalResistorEnabled>false</IsTerminalResistorEnabled>
+    <EnableErrorFrame>false</EnableErrorFrame>
+    <FilterCanId>0</FilterCanId>
+    <UsbDeviceId>VID_05E3&amp;PID_0610</UsbDeviceId>
+  </Params>
+  <IsEnabled>true</IsEnabled>
+  <Status>未连接</Status>
+  <Steps>
+    <Step>
+      <Name>请求扩展会话</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>CAN</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>7DF</Id>
+        <Content>02 10 03</Content>
+      </Protocol>
+      <ResultVariables>
+        <ResultVariable>
+          <Name>回应</Name>
+          <Unit />
+          <StartBit>0</StartBit>
+          <EndBit>7</EndBit>
+          <Length>8</Length>
+          <Resolution>1</Resolution>
+          <Offset>0</Offset>
+          <Endian>LittleEndian</Endian>
+          <CanId>7DC</CanId>
+        </ResultVariable>
+      </ResultVariables>
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>获取版本号</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>CAN</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>0x500</Id>
+        <Content>01 20 00 00</Content>
+      </Protocol>
+      <ResultVariables>
+        <ResultVariable>
+          <Name>版本号 </Name>
+          <Unit />
+          <StartBit>0</StartBit>
+          <EndBit>7</EndBit>
+          <Length>8</Length>
+          <Resolution>1</Resolution>
+          <Offset>0</Offset>
+          <Endian>LittleEndian</Endian>
+          <CanId>0x200</CanId>
+        </ResultVariable>
+      </ResultVariables>
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>测试</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>CAN</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>500</Id>
+        <Content>01 30 00</Content>
+      </Protocol>
+      <ResultVariables>
+        <ResultVariable>
+          <Name>结果</Name>
+          <Unit />
+          <StartBit>1</StartBit>
+          <EndBit>7</EndBit>
+          <Length>8</Length>
+          <Resolution>1</Resolution>
+          <Offset>0</Offset>
+          <Endian>LittleEndian</Endian>
+          <CanId>200</CanId>
+        </ResultVariable>
+      </ResultVariables>
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>控制继电器</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>CAN</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id>500</Id>
+        <Content>02 80 00 03</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+  </Steps>
+</Device>

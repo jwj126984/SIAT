@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestCaseConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>BRMS</Name>
+  <Description />
+  <CreatedDate>2026-02-27T14:01:24.0311044+08:00</CreatedDate>
+  <ModifiedDate>2026-02-27T14:01:49.0842986+08:00</ModifiedDate>
+  <Projects>
+    <Project>
+      <Name>烧录测试</Name>
+      <Description />
+      <ProjectPath>D:\VSDemo\SIAT\SIAT\bin\Debug\net8.0-windows\Projects\烧录测试</ProjectPath>
+      <AddedDate>2026-02-27T14:01:39.6025667+08:00</AddedDate>
+      <Order>1</Order>
+      <Variables>
+        <Variable>
+          <VariableName>烧录设备</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>false</IsVisible>
+          <QualifiedValue />
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value>烧录器</Value>
+        </Variable>
+        <Variable>
+          <VariableName>烧录结果</VariableName>
+          <VariableType>String</VariableType>
+          <Description />
+          <IsVisible>true</IsVisible>
+          <QualifiedValue>烧录成功</QualifiedValue>
+          <Unit />
+          <IsRange>false</IsRange>
+          <Value />
+        </Variable>
+      </Variables>
+    </Project>
+  </Projects>
+</TestCaseConfig>

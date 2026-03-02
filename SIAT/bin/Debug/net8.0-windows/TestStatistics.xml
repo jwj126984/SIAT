@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestStatistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TotalTestCount>5</TotalTestCount>
+  <TotalPassedCount>1</TotalPassedCount>
+  <TotalFailedCount>4</TotalFailedCount>
+  <LastUpdateTime>2025-12-10T14:40:19.4828527+08:00</LastUpdateTime>
+</TestStatistics>

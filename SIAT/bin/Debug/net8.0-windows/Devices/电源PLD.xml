@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>电源PLD</Name>
+  <DeviceType>ZLG_USBCAN_I</DeviceType>
+  <DeviceIndex>0</DeviceIndex>
+  <CommunicationType>Serial</CommunicationType>
+  <Params>
+    <SerialPort>COM18</SerialPort>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <IPAddress>192.168.1.1</IPAddress>
+    <Port>8080</Port>
+    <CanChannel>CAN0</CanChannel>
+    <DeviceIndex>0</DeviceIndex>
+    <CanBaudRate>250000</CanBaudRate>
+    <CanWorkMode>Normal</CanWorkMode>
+    <IsCanFd>false</IsCanFd>
+    <CanFdDataBaudRate>2000000</CanFdDataBaudRate>
+    <ArbitrationSamplePoint>80</ArbitrationSamplePoint>
+    <DataSamplePoint>80</DataSamplePoint>
+    <CanFilterMode>DualFilter</CanFilterMode>
+    <AcceptanceCode>0</AcceptanceCode>
+    <AcceptanceMask>4294967295</AcceptanceMask>
+    <IsTerminalResistorEnabled>false</IsTerminalResistorEnabled>
+    <EnableErrorFrame>false</EnableErrorFrame>
+    <FilterCanId>0</FilterCanId>
+    <UsbDeviceId>VID_13D3&amp;PID_5497</UsbDeviceId>
+  </Params>
+  <IsEnabled>false</IsEnabled>
+  <Status>未连接</Status>
+  <Steps>
+    <Step>
+      <Name>启动电源</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>:OUTP ON
+</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>设置电压10V，1A</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>APPL 10,1
+</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>关闭电源</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>:OUTP OFF
+</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>电源读取电压</Name>
+      <StepType>SendAndReceive</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>:MEAS?
+</Content>
+      </Protocol>
+      <ResultVariables>
+        <ResultVariable>
+          <Name>电源读取电压</Name>
+          <Unit>V</Unit>
+          <StartBit>0</StartBit>
+          <EndBit>7</EndBit>
+          <Length>8</Length>
+          <Resolution>1</Resolution>
+          <Offset>0</Offset>
+          <Endian>LittleEndian</Endian>
+          <CanId />
+        </ResultVariable>
+      </ResultVariables>
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>true</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>设置电压12V，1A</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>APPL 12,1
+</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+    <Step>
+      <Name>设置电压14V，1A</Name>
+      <StepType>SendOnly</StepType>
+      <Protocol>
+        <Type>ASCII</Type>
+        <IsCanFd>false</IsCanFd>
+        <Id />
+        <Content>APPL 14,1
+</Content>
+      </Protocol>
+      <ResultVariables />
+      <IsEnabled>true</IsEnabled>
+      <WaitForResponse>false</WaitForResponse>
+    </Step>
+  </Steps>
+</Device>

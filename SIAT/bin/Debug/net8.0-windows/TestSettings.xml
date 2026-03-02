@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StartMode>Tooling</StartMode>
+  <BarcodeLength>8</BarcodeLength>
+  <ToolingPort>COM27</ToolingPort>
+  <ToolingBaudRate>115200</ToolingBaudRate>
+  <CanDeviceName>CANalyst</CanDeviceName>
+</TestSettings>
