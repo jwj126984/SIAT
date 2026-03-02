@@ -1918,16 +1918,10 @@ namespace SIAT
                 foreach (var projectConfig in _loadedProjects.OrderBy(p => p.Name))
                 {
                     // 检查项目中是否包含该变量
-                    var existingVariable = projectConfig.Variables.FirstOrDefault(v => 
+                    if (projectConfig.Variables.Any(v => 
                         string.Equals(v.Name, variable.Name, StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase));
-                    
-                    if (existingVariable != null)
+                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase)))
                     {
-                        // 直接更新变量的Value属性，这样在下一个步骤输入绑定时就能使用更新后的值
-                        existingVariable.Value = variable.ActualValue;
-                        existingVariable.ActualValue = variable.ActualValue;
-                        
                         // 使用项目名+变量名作为键，确保每个项目的变量值独立存储
                         string key = $"{projectConfig.Name}_{variable.Name}";
                         _variableValues[key] = variable;
