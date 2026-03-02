@@ -1911,28 +1911,42 @@ namespace SIAT
         {
             bool variableFound = false;
             
-            // 存储变量的最新值，用于后续项目显示
-            if (!variableFound)
+            // 为每个项目更新变量值
+            foreach (var projectConfig in _loadedProjects.OrderBy(p => p.Name))
             {
-                // 为每个项目存储变量的最新值
-                foreach (var projectConfig in _loadedProjects.OrderBy(p => p.Name))
+                // 检查项目中是否包含该变量
+                var existingVariable = projectConfig.Variables.FirstOrDefault(v => 
+                    string.Equals(v.Name, variable.Name, StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase));
+                
+                if (existingVariable != null)
                 {
-                    // 检查项目中是否包含该变量
-                    var existingVariable = projectConfig.Variables.FirstOrDefault(v => 
-                        string.Equals(v.Name, variable.Name, StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(v.Description, variable.Description, StringComparison.OrdinalIgnoreCase));
+                    // 更新项目变量的值
+                    existingVariable.Value = variable.Value;
+                    existingVariable.ActualValue = variable.ActualValue;
                     
-                    if (existingVariable != null)
+                    // 同时更新该项目中所有步骤的输入绑定中引用的变量值
+                    foreach (var step in projectConfig.Steps)
                     {
-                        // 更新项目变量的Value属性
-                        existingVariable.Value = variable.Value;
-                        existingVariable.ActualValue = variable.ActualValue;
-                        
-                        // 使用项目名+变量名作为键，确保每个项目的变量值独立存储
-                        string key = $"{projectConfig.Name}_{variable.Name}";
-                        _variableValues[key] = variable;
-                        variableFound = true;
+                        if (step.InputBindings != null)
+                        {
+                            foreach (var inputBinding in step.InputBindings)
+                            {
+                                if (inputBinding.IsBound && inputBinding.SelectedVariable != null && 
+                                    (string.Equals(inputBinding.SelectedVariable.VariableName, variable.Name, StringComparison.OrdinalIgnoreCase) ||
+                                     string.Equals(inputBinding.SelectedVariable.Description, variable.Description, StringComparison.OrdinalIgnoreCase)))
+                                {
+                                    // 更新输入绑定中变量的值
+                                    inputBinding.SelectedVariable.Value = variable.Value;
+                                }
+                            }
+                        }
                     }
+                    
+                    // 使用项目名+变量名作为键，确保每个项目的变量值独立存储
+                    string key = $"{projectConfig.Name}_{variable.Name}";
+                    _variableValues[key] = variable;
+                    variableFound = true;
                 }
             }
             
@@ -1948,7 +1962,6 @@ namespace SIAT
         private void UpdateVariableProperties(TestVariable existingVariable, TestVariable variable)
         {
             existingVariable.ActualValue = variable.ActualValue;
-            existingVariable.Value = variable.Value;
             existingVariable.TestTime = variable.TestTime;
             existingVariable.Duration = variable.Duration;
             existingVariable.Type = variable.Type;
