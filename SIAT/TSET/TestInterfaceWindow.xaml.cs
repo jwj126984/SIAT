@@ -1061,15 +1061,7 @@ namespace SIAT
                 var variables = new Dictionary<string, object>();
                 // 添加条码信息到变量字典，以便插件步骤使用
                 variables["Barcode"] = _currentBarcode;
-                
-                // 添加当前项目中所有变量的最新值到变量字典
-                foreach (var projectConfig in _loadedProjects)
-                {
-                    foreach (var variable in projectConfig.Variables)
-                    {
-                        variables[variable.Name] = variable.Value;
-                    }
-                }
+               
                 
                 // 执行测试步骤，传递项目变量的Value属性值
                 var result = await executionEngine.ExecuteStepAsync(step, variables);
@@ -1932,7 +1924,7 @@ namespace SIAT
                     
                     if (existingVariable != null)
                     {
-                        // 直接更新项目配置中变量的Value属性
+                        // 更新项目变量的Value属性
                         existingVariable.Value = variable.Value;
                         existingVariable.ActualValue = variable.ActualValue;
                         
