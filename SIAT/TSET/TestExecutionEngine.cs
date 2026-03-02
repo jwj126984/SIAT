@@ -241,8 +241,15 @@ namespace SIAT.TSET
                     {
                         if (inputBinding.IsBound && inputBinding.SelectedVariable != null)
                         {
-                            // 直接使用输入绑定的Name作为键值，使用变量的默认值
-                            inputParams[inputBinding.Name] = inputBinding.SelectedVariable.Value;
+                            // 优先使用传入的variables字典中的值（最新的变量值），如果不存在则使用变量的默认值
+                            if (variables != null && variables.TryGetValue(inputBinding.Name, out object? value))
+                            {
+                                inputParams[inputBinding.Name] = value;
+                            }
+                            else
+                            {
+                                inputParams[inputBinding.Name] = inputBinding.SelectedVariable.Value;
+                            }
                         }
                     }
                 }
