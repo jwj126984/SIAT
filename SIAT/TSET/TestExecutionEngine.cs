@@ -94,7 +94,7 @@ namespace SIAT.TSET
                 else if (!string.IsNullOrEmpty(step.ProtocolContent))
                 {
                     // 设备步骤执行逻辑
-                    result = await ExecuteDeviceStepAsync(step);
+                    result = await ExecuteDeviceStepAsync(step, variables);
                 }
                 else
                 {
@@ -172,7 +172,7 @@ namespace SIAT.TSET
         /// <summary>
         /// 执行设备步骤
         /// </summary>
-        private async Task<TestStepResult> ExecuteDeviceStepAsync(TestStepConfig step)
+        private async Task<TestStepResult> ExecuteDeviceStepAsync(TestStepConfig step, Dictionary<string, object>? variables = null)
         {
             var result = new TestStepResult { StepName = step.Name };
 
@@ -180,6 +180,25 @@ namespace SIAT.TSET
 
             try
               {
+                // 处理输入绑定
+                if (step.InputBindings != null && step.InputBindings.Count > 0)
+                {
+                    StepProgress?.Invoke(this, new TestStepProgressEventArgs(step.Name, 30, "处理输入绑定"));
+
+                    // 收集输入绑定的值
+                    foreach (var inputBinding in step.InputBindings)
+                    {
+                        if (inputBinding.IsBound && inputBinding.SelectedVariable != null)
+                        {
+                            // 优先使用variables字典中的值（如果存在），否则使用变量的默认值
+                            if (variables != null && variables.TryGetValue(inputBinding.Name, out object? variableValue))
+                            {
+                                inputBinding.SelectedVariable.Value = variableValue.ToString();
+                            }
+                        }
+                    }
+                }
+
                 // 执行基于协议的测试步骤
                 var protocolResult = await ExecuteProtocolBasedStepAsync(step);
                 result.ActualValue = protocolResult.ActualValue;
@@ -189,7 +208,7 @@ namespace SIAT.TSET
                 StepProgress?.Invoke(this, new TestStepProgressEventArgs(step.Name, 70, "解析响应数据并更新绑定变量"));
 
                 // 根据输出绑定关系更新变量
-                UpdateOutputBindings(step, protocolResult.ActualValue);
+                UpdateOutputBindings(step, protocolResult.ActualValue, variables);
             }
             catch (Exception ex)
             {
@@ -241,15 +260,8 @@ namespace SIAT.TSET
                     {
                         if (inputBinding.IsBound && inputBinding.SelectedVariable != null)
                         {
-                            // 优先使用传入的variables字典中的值（最新的变量值），如果不存在则使用变量的默认值
-                            if (variables != null && variables.TryGetValue(inputBinding.Name, out object? value))
-                            {
-                                inputParams[inputBinding.Name] = value;
-                            }
-                            else
-                            {
-                                inputParams[inputBinding.Name] = inputBinding.SelectedVariable.Value;
-                            }
+                            // 直接使用输入绑定的Name作为键值，使用变量的默认值
+                            inputParams[inputBinding.Name] = inputBinding.SelectedVariable.Value;
                         }
                     }
                 }
@@ -305,7 +317,7 @@ namespace SIAT.TSET
         /// <summary>
         /// 根据输出绑定关系更新变量
         /// </summary>
-        private void UpdateOutputBindings(TestStepConfig step, string actualValue)
+        private void UpdateOutputBindings(TestStepConfig step, string actualValue, Dictionary<string, object>? variables = null)
         {
             if (step.OutputBindings == null || step.OutputBindings.Count == 0)
                 return;

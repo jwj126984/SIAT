@@ -1062,12 +1062,11 @@ namespace SIAT
                 // 添加条码信息到变量字典，以便插件步骤使用
                 variables["Barcode"] = _currentBarcode;
                 
-                // 添加所有项目变量的最新值，确保使用最新的变量值作为输入绑定
+                // 添加当前项目中所有变量的最新值到变量字典
                 foreach (var projectConfig in _loadedProjects)
                 {
                     foreach (var variable in projectConfig.Variables)
                     {
-                        // 使用变量名作为键，值作为值
                         variables[variable.Name] = variable.Value;
                     }
                 }
